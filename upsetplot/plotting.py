@@ -532,7 +532,7 @@ class UpSet:
         handles, labels = ax.get_legend_handles_labels()
         if self._horizontal:
             # Make legend order match visual stack order
-            ax.legend(reversed(handles), reversed(labels))
+            ax.legend(list(reversed(handles)), list(reversed(labels)))
         else:
             ax.legend()
 
