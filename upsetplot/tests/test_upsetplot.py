@@ -664,7 +664,7 @@ def test_add_stacked_bars_colors(colors, expected):
     ).cat.codes.map({0: "foo", 1: "bar", 2: "baz"})
 
     upset = UpSet(df)
-    upset.add_stacked_bars(by="label", colors=colors, title="Count by gender")
+    upset.add_stacked_bars(by="label", colors=colors, title="Count by sex")
     upset_axes = upset.plot()
     stacked_axes = upset_axes["extra1"]
     color_to_label = _get_color_to_label_from_legend(stacked_axes)
